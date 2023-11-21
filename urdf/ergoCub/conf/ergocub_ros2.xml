@@ -29,6 +29,10 @@
     <xi:include href="wrappers/FT/right_leg-FT_wrapper.xml" />
     <xi:include href="wrappers/FT/left_arm-FT_wrapper.xml" />
     <xi:include href="wrappers/FT/right_arm-FT_wrapper.xml" />
+    <xi:include href="wrappers/FT/left_foot-FT_remapper.xml" />
+    <xi:include href="wrappers/FT/right_foot-FT_remapper.xml" />
+    <xi:include href="wrappers/FT/left_foot-FT_wrapper.xml" />
+    <xi:include href="wrappers/FT/right_foot-FT_wrapper.xml" />
 
     <!-- INERTIAL SENSOR-->
     <xi:include href="wrappers/inertials/head-inertials_wrapper.xml" />
@@ -37,7 +41,9 @@
     <xi:include href="sensors/rgbd_camera_wrapper.xml" />
     <xi:include href="sensors/rgbd_camera_wrapper_ros2.xml" />
     <xi:include href="sensors/lidar_wrapper.xml" />
-    <xi:include href="sensors/lidar_wrapper_ros2.xml" />
+    <!--<xi:include href="sensors/lidar_wrapper_ros2.xml" />-->
+    <xi:include href="wrappers/FT/left_foot-FT_nws_ros2.xml" />
+    <xi:include href="wrappers/FT/right_foot-FT_nws_ros2.xml" />
 
     </devices>
 </robot>
