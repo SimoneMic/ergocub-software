@@ -3073,7 +3073,7 @@
   </gazebo>
   <gazebo>
     <plugin name="robotinterface" filename="libgazebo_yarp_robotinterface.so">
-      <yarpRobotInterfaceConfigurationFile>model://ergoCub/conf/ergocub.xml</yarpRobotInterfaceConfigurationFile>
+      <yarpRobotInterfaceConfigurationFile>model://ergoCub/conf/ergocub_ros2.xml</yarpRobotInterfaceConfigurationFile>
     </plugin>
   </gazebo>
   <gazebo>
