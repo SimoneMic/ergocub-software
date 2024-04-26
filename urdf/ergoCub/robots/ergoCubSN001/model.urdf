@@ -124,13 +124,13 @@
       </material>
     </collision>
   </link>
-  <joint name="torso_pitch" type="fixed">
-    <origin xyz="-7.30886630439206e-17 -4.930380657631324e-32 0.11800000000000001" rpy="3.9719461100401744e-15 0.174533 1.0587911275090697e-22"/>
+  <joint name="torso_pitch" type="revolute">
+    <origin xyz="-7.30886630439206e-17 -4.930380657631324e-32 0.11800000000000001" rpy="3.9719461100401744e-15 2.710505431213761e-20 1.0587911275090697e-22"/>
     <axis xyz="1.058791184074231e-22 1 4.336808689942018e-19"/>
     <parent link="torso_1"/>
     <child link="torso_2"/>
-    <!--<limit lower="-0.3141592653589793" upper="0.7853981633974483" effort="1e+9" velocity="1e+9"/>-->
-    <!--<dynamics damping="2" friction="0"/>-->
+    <limit lower="-0.3141592653589793" upper="0.7853981633974483" effort="1e+9" velocity="1e+9"/>
+    <dynamics damping="2" friction="0"/>
   </joint>
   <link name="torso_2">
     <inertial>
