@@ -29,6 +29,8 @@
     <xi:include href="wrappers/FT/right_leg-FT_wrapper.xml" />
     <xi:include href="wrappers/FT/left_arm-FT_wrapper.xml" />
     <xi:include href="wrappers/FT/right_arm-FT_wrapper.xml" />
+    <xi:include href="wrappers/FT/right_foot_FT_ros2.xml"/>
+    <xi:include href="wrappers/FT/left_foot_FT_ros2.xml"/>
 
     <!-- INERTIAL SENSOR-->
     <xi:include href="wrappers/inertials/head-inertials_wrapper.xml" />
@@ -39,6 +41,7 @@
     <xi:include href="wrappers/inertials/right_foot-IMU_wrapper.xml" />
     <xi:include href="wrappers/inertials/alljoints-inertials_wrapper.xml" />
     <xi:include href="wrappers/inertials/alljoints-inertials_remapper.xml" />
+
 
     <!--  HEAD SENSORS -->
     <xi:include href="sensors/rgbd_camera_wrapper.xml" />
