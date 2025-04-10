@@ -19,28 +19,22 @@ jobs:
     strategy:
       matrix:
         build_type: [Release]
-        os: [ubuntu-latest, windows-2019, macos-latest]
+        os: [ubuntu-latest, windows-2022]
       fail-fast: false
 
     steps:
     - uses: actions/checkout@v2
 
-    - uses: conda-incubator/setup-miniconda@v2
+    - uses: conda-incubator/setup-miniconda@v3
       with:
-        miniforge-variant: Mambaforge
+        miniforge-variant: Miniforge3
         miniforge-version: latest
-        channels: conda-forge,robotology
-        channel-priority: true
 
     - name: Dependencies
       shell: bash -l {0}
       run: |
-        # Workaround for https://github.com/conda-incubator/setup-miniconda/issues/186
-        conda config --remove channels defaults
-        # Compilation related dependencies
-        mamba install cmake compilers make ninja pkg-config
-        # Actual dependencies
-        mamba install ycm-cmake-modules yarp opencv idyntree
+        # Install ependencies
+        conda install cmake compilers make ninja pkg-config ycm-cmake-modules yarp opencv idyntree
 
     - name: Configure [Linux&macOS]
       if: contains(matrix.os, 'macos') || contains(matrix.os, 'ubuntu')
@@ -57,7 +51,7 @@ jobs:
       run: |
         mkdir -p build
         cd build
-        cmake -G"Visual Studio 16 2019" -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install \
+        cmake -G"Visual Studio 17 2022" -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install \
               -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} -DCOMPILE_ergoCubEmotions:BOOL=ON -DBUILD_TESTING:BOOL=ON ..
 
     - name: Build

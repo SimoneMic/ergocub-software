@@ -5,7 +5,6 @@
 *.slo
 *.lo
 *.o
-*.obj
 
 # Precompiled Headers
 *.gch
@@ -37,3 +36,6 @@
 # Build directory
 build*/
 
+# Visual studio
+.vs/*
+CMakeSettings.json
