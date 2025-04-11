@@ -40,7 +40,7 @@
     <!--  HEAD SENSORS -->
     <xi:include href="sensors/rgbd_camera_wrapper.xml" />
     <xi:include href="sensors/lidar_wrapper.xml" />
-    <xi:include href="sensors/stereo_camera_wrapper.xml" />
+    <xi:include href="sensors/rgbd_camera_wrapper_fake_stereo.xml" />
 
     </devices>
 </robot>
