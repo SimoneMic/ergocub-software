@@ -2214,13 +2214,13 @@
   </joint>
   <link name="right_stereo_frame"/>
   <joint name="right_stereo_frame_fixed_joint" type="fixed">
-    <origin xyz="0.36 0.0 0.0" rpy="0.0 0.0 0.0" />
+    <origin xyz="0.036 0.0 0.0" rpy="0.0 0.0 0.0" />
     <parent link="realsense_rgb_frame"/>
     <child link="right_stereo_frame"/>
   </joint>
   <link name="left_stereo_frame"/>
   <joint name="left_stereo_frame_frame_fixed_joint" type="fixed">
-    <origin xyz="-0.59 0.0 0.0" rpy="0.0 0.0 0.0" />
+    <origin xyz="-0.059 0.0 0.0" rpy="0.0 0.0 0.0" />
     <parent link="realsense_rgb_frame" />
     <child link="left_stereo_frame" />
   </joint>
@@ -3377,7 +3377,7 @@
   </gazebo>
   <gazebo>
     <plugin name="robotinterface" filename="libgazebo_yarp_robotinterface.so">
-      <yarpRobotInterfaceConfigurationFile>model://ergoCub/conf/ergocub_ros2.xml</yarpRobotInterfaceConfigurationFile>
+      <yarpRobotInterfaceConfigurationFile>model://ergoCub/conf/ergocub.xml</yarpRobotInterfaceConfigurationFile>
     </plugin>
   </gazebo>
   <gazebo>
@@ -3676,29 +3676,29 @@
         <image>
           <width>640</width>
           <height>480</height>
-          <format>INT8</format>
+          <format>L8</format>
         </image>
         <clip>
           <near>0.02</near>
           <far>3000</far>
         </clip>
       </camera>
-      <visualize>false</visualize>
-      <plugin name="ergocub_yarp_gazebo_plugin_camera" filename="libgazebo_yarp_camera.so">
-        <yarpConfigurationFile>model://ergoCub/conf/gazebo_ergocub_rgb_camera.ini</yarpConfigurationFile>
+      <visualize>true</visualize>
+      <plugin name="ergocub_yarp_gazebo_plugin_stereo_right_camera" filename="libgazebo_yarp_camera.so">
+        <yarpConfigurationFile>model://ergoCub/conf/sensors/gazebo_ergocub_stereo_camera_right.ini</yarpConfigurationFile>
       </plugin>
     </sensor>
   </gazebo>
   <sensor name="realsense_right_stereo_camera" type="camera">
     <parent link="right_stereo_frame"/>
-    <origin rpy="0.0 0.0 0.0 " xyz="0.0 0.0 0.0"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
   </sensor>
   <gazebo reference="left_stereo_frame">
     <sensor name="realsense_left_stereo_camera" type="camera">
       <always_on>1</always_on>
       <update_rate>30.000000</update_rate>
       <pose>0.0 0.0 0.0 0.0 0.0 0.0 </pose>
-      <camera name="intel_realsense_rgb_camera">
+      <camera name="intel_left_realsense_rgb_camera">
         <pose>0 0 0 0.0 0.0 0.0</pose>
         <horizontal_fov>1.2217</horizontal_fov>
         <distortion>
@@ -3712,16 +3712,16 @@
         <image>
           <width>640</width>
           <height>480</height>
-          <format>INT8</format>
+          <format>L8</format>
         </image>
         <clip>
           <near>0.02</near>
           <far>3000</far>
         </clip>
       </camera>
-      <visualize>false</visualize>
-      <plugin name="ergocub_yarp_gazebo_plugin_camera" filename="libgazebo_yarp_camera.so">
-        <yarpConfigurationFile>model://ergoCub/conf/gazebo_ergocub_rgb_camera.ini</yarpConfigurationFile>
+      <visualize>true</visualize>
+      <plugin name="ergocub_yarp_gazebo_plugin_stereo_left_camera" filename="libgazebo_yarp_camera.so">
+        <yarpConfigurationFile>model://ergoCub/conf/sensors/gazebo_ergocub_stereo_camera_left.ini</yarpConfigurationFile>
       </plugin>
     </sensor>
   </gazebo>
