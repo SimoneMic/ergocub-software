@@ -3209,6 +3209,7 @@
   <gazebo>
     <plugin name="gzyarp::RobotInterface" filename="gz-sim-yarp-robotinterface-system">
       <yarpRobotInterfaceConfigurationFile>model://ergoCub/conf/ergocub.xml</yarpRobotInterfaceConfigurationFile>
+      <yarpRobotInterfaceEnableTags>(enable_ros2)</yarpRobotInterfaceEnableTags>
     </plugin>
   </gazebo>
   <gazebo>

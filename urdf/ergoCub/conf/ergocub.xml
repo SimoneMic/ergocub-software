@@ -51,7 +51,7 @@
     <xi:include href="wrappers/motorControl/right_hand-coupling_handler.xml" enabled_by="enable_coupling enable_coupling_ros2" disabled_by="disable_coupling disable_coupling_ros2" />
     <xi:include href="wrappers/motorControl/left_arm-mc_remapper-coupling.xml" enabled_by="enable_coupling enable_coupling_ros2" disabled_by="disable_coupling disable_coupling_ros2" />
     <xi:include href="wrappers/motorControl/right_arm-mc_remapper-coupling.xml" enabled_by="enable_coupling enable_coupling_ros2" disabled_by="disable_coupling disable_coupling_ros2" />
-    <xi:include href="wrappers/motorControl/all-mc_remapper.xml" enabled_by="enable_coupling enable_coupling_ros2" disabled_by="disable_coupling disable_coupling_ros2"/>
+    <xi:include href="wrappers/motorControl/all-mc_remapper.xml" enabled_by="enable_ros2 enable_coupling enable_coupling_ros2" disabled_by="disable_coupling disable_coupling_ros2"/>
 
     <xi:include href="wrappers/motorControl/left_arm-mc_wrapper-coupling.xml" enabled_by="enable_coupling" disabled_by="disable_coupling" />
     <xi:include href="wrappers/motorControl/right_arm-mc_wrapper-coupling.xml" enabled_by="enable_coupling" disabled_by="disable_coupling" />
