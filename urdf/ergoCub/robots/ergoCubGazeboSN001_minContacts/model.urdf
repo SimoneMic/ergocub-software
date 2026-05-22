@@ -2656,7 +2656,6 @@
   <gazebo reference="head">
     <sensor name="lasersensor_head" type="gpu_lidar">
       <always_on>1</always_on>
-      <update_rate>100.000000</update_rate>
       <pose>5e-05 -1.93855e-15 0.134802 9.72195e-15 5.33157e-15 3.16761e-15 </pose>
       <always_on>1</always_on>
       <visualize>true</visualize>
@@ -2665,14 +2664,14 @@
         <scan>
           <horizontal>
             <samples>720</samples>
-            <resolution>0.5</resolution>
+            <resolution>1</resolution>
             <min_angle>0</min_angle>
             <max_angle>6.28</max_angle>
           </horizontal>
         </scan>
         <range>
           <min>0.2</min>
-          <max>5</max>
+          <max>25</max>
           <resolution>0.01</resolution>
         </range>
         <noise>
